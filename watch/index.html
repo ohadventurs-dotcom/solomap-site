@@ -141,8 +141,9 @@
     .unmute-overlay.hidden { display: none; }
 
     /* ===== CTA ===== */
-    .cta-block { padding: 18px 0; }
-    .cta-block.is-hidden { display: none; }
+    .cta-block { padding: 18px 0; transition: filter .7s ease, opacity .7s ease; }
+    /* נעול: מוצג מטושטש ולא-לחיץ מההתחלה (יוצר סקרנות), נחשף אחרי 3 דק' צפייה עם קול */
+    .cta-block.is-locked { filter: blur(9px); opacity: .9; pointer-events: none; user-select: none; }
 
     .cta-btn {
       display: inline-block;
@@ -220,8 +221,8 @@
     </div>
   </section>
 
-  <!-- CTA 1 — מתגלה אחרי 5 דקות צפייה עם קול (VSL delayed CTA) -->
-  <section class="cta-block is-hidden" id="cta1">
+  <!-- CTA 1 — מטושטש מההתחלה, נחשף אחרי 3 דקות צפייה עם קול (VSL delayed CTA) -->
+  <section class="cta-block is-locked" id="cta1">
     <div class="wrap">
       <a class="cta-btn" href="https://solomaster.fillout.com/ohadventurs?ref=vsl-b">בוא נדבר על הטיול שלך →</a>
       <p class="cta-sub">ממלאים שאלון קצר ומתאמים שיחה של 30 דקות, בלי התחייבות</p>
@@ -272,9 +273,9 @@
       // אבני דרך — נספרות רק אחרי שיש קול (לא על ה-autoplay המושתק)
       player.on('timeupdate', function (data) {
         if (!unmuted) return;
-        // VSL: חשיפת הכפתור אחרי 5 דקות צפייה עם קול
-        if (data.seconds >= 300 && cta && cta.classList.contains('is-hidden')) {
-          cta.classList.remove('is-hidden');
+        // VSL: חשיפת הכפתור (הסרת הטשטוש) אחרי 3 דקות צפייה עם קול
+        if (data.seconds >= 180 && cta && cta.classList.contains('is-locked')) {
+          cta.classList.remove('is-locked');
           if (window.fbq) fbq('trackCustom', 'CTARevealed');
           if (window.clarity) clarity('event', 'cta_revealed');
         }
