@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>לא חסר לך מידע. אז למה אתה עדיין לא טס? | SoloMaster</title>
+  <meta name="description" content="הקלטתי לך 14 דקות על מה שבאמת עוצר אותך.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="לא חסר לך מידע. אז למה אתה עדיין לא טס?">
+  <meta property="og:description" content="הקלטתי לך 14 דקות על מה שבאמת עוצר אותך.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://solomap.ohadlevy.co.il/">
+
+  <!-- ===== Meta Pixel: SoloMap (710154611934767) — פעיל ===== -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '710154611934767');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=710154611934767&ev=PageView&noscript=1"/></noscript>
+  <!-- ===== סוף Meta Pixel ===== -->
+
+  <!-- ===== Microsoft Clarity (מפת חום + הקלטות) — פעיל ===== -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x9q99h8br3");
+  </script>
+  <!-- ===== סוף Clarity ===== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- preconnect ל-Vimeo: מקצר את ה-handshake לפני שהנגן נטען -->
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+  <link rel="preconnect" href="https://f.vimeocdn.com" crossorigin>
+  <!-- טעינת פונט לא-חוסמת-רינדור (חוסך ~1.1s לפי PageSpeed) -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    :root {
+      --bg: #0A1628;
+      --bg-soft: #0F1E33;
+      --text: #FFFFFF;
+      --muted: #A9B6C7;
+      --gold: #E8A44A;
+      --gold-hover: #F2B765;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Heebo', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      padding: 26px 0 10px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: clamp(17px, 4.2vw, 21px);
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    /* ===== Video ===== */
+    .video-section { padding: 8px 0 6px; }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+      border: 1px solid rgba(232,164,74,0.18);
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      top: 0; right: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    .unmute-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%; height: 100%;
+      border: 0;
+      cursor: pointer;
+      background: rgba(10,22,40,0.30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Heebo', sans-serif;
+    }
+    .unmute-overlay span {
+      background: var(--gold);
+      color: #0A1628;
+      font-size: clamp(16px, 4vw, 22px);
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .unmute-overlay.hidden { display: none; }
+
+    /* ===== CTA ===== */
+    .cta-block { padding: 18px 0; }
+    .cta-block.is-hidden { display: none; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #0A1628;
+      font-size: clamp(18px, 4.5vw, 22px);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 18px 38px;
+      border-radius: 999px;
+      transition: transform .15s ease, background .15s ease;
+      box-shadow: 0 8px 24px rgba(232,164,74,0.25);
+    }
+
+    .cta-btn:hover { background: var(--gold-hover); transform: translateY(-2px); }
+    .cta-btn:active { transform: translateY(0); }
+
+    .cta-sub {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 14px;
+    }
+
+    /* ===== Social proof ===== */
+    .proof {
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: var(--bg-soft);
+    }
+
+    .proof-line {
+      font-size: clamp(16px, 4vw, 19px);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .proof-line span { color: var(--gold); font-weight: 700; }
+
+    /* ===== Footer ===== */
+    footer {
+      padding: 16px 0 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap">
+      <h1>לא חסר לך מידע.<br>אז למה אתה עדיין לא טס?</h1>
+      <p class="subtitle">הקלטתי לך 14 דקות על מה שבאמת עוצר אותך</p>
+    </div>
+  </header>
+
+  <!-- Video -->
+  <section class="video-section">
+    <div class="wrap">
+      <div class="video-frame">
+        <iframe
+          id="vsl"
+          src="https://player.vimeo.com/video/1201729834?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1"
+          title="סולומאפ"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <button id="unmute" class="unmute-overlay" type="button">
+          <span>🔊 הקש להפעלת הקול</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA 1 — מתגלה אחרי 5 דקות צפייה עם קול (VSL delayed CTA) -->
+  <section class="cta-block is-hidden" id="cta1">
+    <div class="wrap">
+      <a class="cta-btn" href="https://solomaster.fillout.com/ohadventurs?ref=vsl-b">בוא נדבר על הטיול שלך →</a>
+      <p class="cta-sub">ממלאים שאלון קצר ומתאמים שיחה של 30 דקות, בלי התחייבות</p>
+    </div>
+  </section>
+
+  <!-- Social proof -->
+  <section class="proof">
+    <div class="wrap">
+      <p class="proof-line"><span>11 שנים</span> | <span>50 מדינות</span> | <span>400 מטיילים</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap"><span dir="ltr">@ohadventurs</span></div>
+  </footer>
+
+  <!-- ===== מעקב משפך: לחיצות CTA + צפייה בסרטון ===== -->
+  <script>
+    // 1) לחיצה על כל כפתור CTA → Fillout
+    document.querySelectorAll('.cta-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (window.fbq) fbq('trackCustom', 'CTAClick');
+        if (window.clarity) clarity('event', 'cta_click');
+      });
+    });
+
+    // 2) Vimeo: autoplay מושתק + שכבת "הקש להפעלת הקול"
+    var tag = document.createElement('script');
+    tag.src = 'https://player.vimeo.com/api/player.js';
+    tag.onload = function () {
+      var player = new Vimeo.Player('vsl');
+      var overlay = document.getElementById('unmute');
+      var unmuted = false;
+      var fired = { 25: false, 50: false, 75: false, 90: false };
+      var cta = document.getElementById('cta1');
+
+      // לחיצה על השכבה = קול מההתחלה (כדי לא לפספס את הפתיח)
+      overlay.addEventListener('click', function () {
+        unmuted = true;
+        player.setMuted(false);
+        player.setCurrentTime(0).then(function () { return player.play(); }).catch(function () {});
+        overlay.classList.add('hidden');
+        if (window.fbq) fbq('trackCustom', 'VideoPlay'); // נגינה עם קול = כוונה אמיתית
+        if (window.clarity) clarity('event', 'video_unmute');
+      });
+
+      // אבני דרך — נספרות רק אחרי שיש קול (לא על ה-autoplay המושתק)
+      player.on('timeupdate', function (data) {
+        if (!unmuted) return;
+        // VSL: חשיפת הכפתור אחרי 5 דקות צפייה עם קול
+        if (data.seconds >= 300 && cta && cta.classList.contains('is-hidden')) {
+          cta.classList.remove('is-hidden');
+          if (window.fbq) fbq('trackCustom', 'CTARevealed');
+          if (window.clarity) clarity('event', 'cta_revealed');
+        }
+        var p = data.percent * 100;
+        [25, 50, 75, 90].forEach(function (m) {
+          if (p >= m && !fired[m]) {
+            fired[m] = true;
+            if (window.fbq) fbq('trackCustom', 'VideoProgress', { percent: m });
+            if (m === 50 && window.fbq) fbq('track', 'ViewContent'); // אירוע סטנדרטי לאופטימיזציה
+            if (window.clarity) clarity('event', 'video_' + m);
+          }
+        });
+      });
+    };
+    document.head.appendChild(tag);
+  </script>
+
+</body>
+</html>
