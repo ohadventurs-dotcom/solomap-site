@@ -242,6 +242,14 @@
 
   <!-- ===== מעקב משפך: לחיצות CTA + צפייה בסרטון ===== -->
   <script>
+    // 0) תיוג מקור: arm מה-URL -> ref בלינק ה-CTA (מדידת הזמנות לפי מקור משפך ב-Fillout)
+    (function () {
+      var arm = new URLSearchParams(location.search).get('arm') || 'optin';
+      document.querySelectorAll('.cta-btn').forEach(function (b) {
+        try { var u = new URL(b.href); u.searchParams.set('ref', arm); b.href = u.toString(); } catch (e) {}
+      });
+    })();
+
     // 1) לחיצה על כל כפתור CTA → Fillout
     document.querySelectorAll('.cta-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
